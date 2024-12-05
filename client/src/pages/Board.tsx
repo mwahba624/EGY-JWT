@@ -1,20 +1,20 @@
-// import { useEffect, useState, useLayoutEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { useEffect, useState, useLayoutEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-// import { retrieveTickets, deleteTicket } from '../api/ticketAPI';
-// import ErrorPage from './ErrorPage';
-// import Swimlane from '../components/Swimlane';
-// import { TicketData } from '../interfaces/TicketData';
-// import { ApiMessage } from '../interfaces/ApiMessage';
+import { retrieveTickets, deleteTicket } from '../api/ticketAPI';
+import ErrorPage from './ErrorPage';
+import Swimlane from '../components/Swimlane';
+import { TicketData } from '../interfaces/TicketData';
+import { ApiMessage } from '../interfaces/ApiMessage';
 
-import { useEffect, useState } from 'react';
-import auth from '../utils/auth';
+// import { useEffect, useState } from 'react';
+import auth from '../utils/auth'; // new import statement for auth
 
-// const boardStates = ['Todo', 'In Progress', 'Done'];
+const boardStates = ['Todo', 'In Progress', 'Done'];
 
 const Board = () => {
-  // const [tickets, setTickets] = useState<TicketData[]>([]);
-  // const [error, setError] = useState(false);
+  const [tickets, setTickets] = useState<TicketData[]>([]);
+  const [error, setError] = useState(false);
   const [loginCheck, setLoginCheck] = useState(false);
 
   const checkLogin = () => {
@@ -23,10 +23,7 @@ const Board = () => {
     }
   };
 
-  useEffect(() => {
-    checkLogin();
-  } , []);
-/*
+
   const fetchTickets = async () => {
     try {
       const data = await retrieveTickets();
@@ -60,39 +57,35 @@ const Board = () => {
   if (error) {
     return <ErrorPage />;
   }
-*/
+
   return (
     <>
     {
-      !loginCheck ? (
+      !loginCheck ? ( // new conditional rendering
         <div className='login-notice'>
           <h1>
             Login to create & view tickets
           </h1>
         </div>  
       ) : (
-          // <div className='board'>
-          //   <button type='button' id='create-ticket-link'>
-          //     <Link to='/create' >New Ticket</Link>
-          //   </button>
-          //   <div className='board-display'>
-          //     {boardStates.map((status) => {
-          //       const filteredTickets = tickets.filter(ticket => ticket.status === status);
-          //       return (
-          //         <Swimlane 
-          //           title={status} 
-          //           key={status} 
-          //           tickets={filteredTickets} 
-          //           deleteTicket={deleteIndvTicket}
-          //         />
-          //       );
-          //     })}
-          //   </div>
-          // </div>
-
-        <div>
-          <h1>Board</h1>
-        </div>
+          <div className='board'>
+            <button type='button' id='create-ticket-link'>
+              <Link to='/create' >New Ticket</Link>
+            </button>
+            <div className='board-display'>
+              {boardStates.map((status) => {
+                const filteredTickets = tickets.filter(ticket => ticket.status === status);
+                return (
+                  <Swimlane 
+                    title={status} 
+                    key={status} 
+                    tickets={filteredTickets} 
+                    deleteTicket={deleteIndvTicket}
+                  />
+                );
+              })}
+            </div>
+          </div>
         )
     }
     </>
