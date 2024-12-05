@@ -9,14 +9,14 @@ export const login = async (req, res) => {
         where: { username },
     });
     if (!user) {
-        return res.status(401).json({ message: 'Authentication failed' });
+        return res.status(401).json({ message: 'Invalid Username' });
     }
     const passwordIsValid = await bcrypt.compare(password, user.password);
     if (!passwordIsValid) {
-        return res.status(401).json({ message: 'Authentication failed' });
+        return res.status(401).json({ message: 'Invalid Password' });
     }
     const secretKey = process.env.JWT_SECRET_KEY || '';
-    const token = jwt.sign({ username }, secretKey, { expiresIn: '48h' });
+    const token = jwt.sign({ username }, secretKey, { expiresIn: '1h' });
     return res.json({ token });
 };
 const router = Router();
