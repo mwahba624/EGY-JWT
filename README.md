@@ -1,6 +1,4 @@
-# 14 Full-Stack React: Kanban Board
-
-# Candidate Search ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
+# 14 Full-Stack React: Kanban Board ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description 
 
@@ -17,6 +15,7 @@ This project enhances an existing Kanban board application by adding secure auth
 - [Questions](#questions)
 - [Credits](#credits)
 - [Walkthrough Video](#walkthrough-video)
+- [Deployed Link](#deployed-link)
 
 ## User Story 
 
@@ -47,11 +46,14 @@ The Kanban board offers the following functionality:
 N/A
 
 ## Walkthrough Video
--[Video link](link)
+-[Video link](N/A)
+
+## Deployed Link
+- [Deployed Link](https://egy-jwt.herokuapp.com/)
 
 ## Questions
-- [Github Profile](https://github.com/mwahba624/EGY-Candiate)
+- [Github Profile](https://github.com/mwahba624/EGY-JWT)
 
 ## Credits
-- Worked with [Jose Rivas ](https://github.com/williamscodigo)
+- N/A
 
