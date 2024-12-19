@@ -16,7 +16,7 @@ const login = async (userInfo: UserLogin) => {
     console.log('Data from user login: ', data);
 
     if (!response.ok) {
-      throw new Error('User information not retrieved, check network tab!');
+      throw new Error('User information not retrieved properly');
     }
 
     return data;
@@ -26,7 +26,5 @@ const login = async (userInfo: UserLogin) => {
   }
   
 }
-
-
 
 export { login };

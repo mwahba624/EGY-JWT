@@ -58,7 +58,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+button a {
+  color: inherit;
+}
+
 button:hover {
+  color: #646cff;
   border-color: #646cff;
 }
 button:focus,
@@ -171,6 +177,7 @@ tbody tr:nth-child(odd) {
 .container {
   /* margin: auto; */
   width: 100%;
+  height: 700px;
   /* height: 90%; */
 }
 
@@ -178,7 +185,6 @@ tbody tr:nth-child(odd) {
   display: block;
   margin-left: auto;
 }
-
 
 .form {
   width: 60%;
@@ -196,8 +202,7 @@ tbody tr:nth-child(odd) {
 }
 
 .form > input {
-  width: 200px;
-  
+  width: 200px; 
 }
 
 .form > label {
