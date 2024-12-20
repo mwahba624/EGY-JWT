@@ -29,6 +29,8 @@ SO THAT I can securely access and manage my work tasks
 ## Usage
 - npm install
 - npm run start:dev
+- username: 'JollyGuru', password: 'password', 
+
 
 ## Feature
 The Kanban board offers the following functionality:
@@ -49,7 +51,7 @@ N/A
 - [Video link](N/A)
 
 ## Deployed Link
-- [Deployed Link](https://egy-jwt.herokuapp.com/)
+- [Deployed Link](https://egy-jwt.onrender.com/)
 
 ## Questions
 - [Github Profile](https://github.com/mwahba624/EGY-JWT)
