@@ -46,7 +46,7 @@ The Kanban board offers the following functionality:
 N/A
 
 ## Walkthrough Video
--[Video link](N/A)
+- [Video link](N/A)
 
 ## Deployed Link
 - [Deployed Link](https://egy-jwt.herokuapp.com/)
